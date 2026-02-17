@@ -1,0 +1,276 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-feature-settings: 'palt' 1; /* 自動文字詰め */
+  color: #B6DECB; /* 真っ黒だとコントラストつきすぎて目が痛いので */
+  background-color: #ffffff; /* 背景色は適宜変更すること */
+}
+
+:root{
+  --main-text-color: #B6DECB;
+  --sub-text-color: #0A5857;
+}
+
+/*=======================================================
+main
+=======================================================*/
+
+body section:nth-child(odd){
+  background-color: #0BA0AC;
+}
+
+body section:nth-child(even){
+  background-color: #22ACB6;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+section{
+  padding: 170px 0;
+}
+
+/*----------------------------------------*
+ top
+*----------------------------------------*/
+
+.top img{
+  width: 40vw;
+  padding-right: 8vw;
+}
+
+.top-title{
+  line-height: 1.3em;
+  font-size: 60px;
+}
+
+.top-title-sub{
+  margin-top: 60px;
+  font-size: 16px;
+}
+
+.top-textbox{
+  padding-left: 14vw;
+}
+
+.top-textbox .align{
+  text-align:right
+}
+
+/*----------------------------------------*
+ data-jp
+*----------------------------------------*/
+
+.section-title{
+  margin-bottom: 40px;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contents-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contents{
+  margin-top: 50px;
+  width: 48%;
+  margin:  40px 0;
+  max-width: 520px;
+  min-width: 300px;
+}
+
+.contents-title{
+  font-size: clamp(10px, 3vw, 24px);
+  margin-bottom: 50px;
+}
+
+.contents .flex .data-number{
+  margin-left: 10px;
+  font-size: clamp(16px, 2vw, 50px);
+}
+
+.contents .flex p span{
+  font-size: clamp(16px, 10vw, 100px);
+}
+
+.graph1{
+  width: 50%;
+}
+
+.graph2 img{
+  width: 50%;
+}
+
+.graph2_b{
+  width: 0;
+}
+
+.graph2_b img{
+  position: relative;
+  width: 22vw;
+  transform-origin: bottom left;
+  top: 1vw;
+  right: 24vw;
+}
+
+.graph4-data-box .flex{
+  justify-content: left;
+}
+
+.graph4-data-box .unit_horizontal{
+  width: 160px;
+  font-size: 30px;
+  line-height: 2.2em;
+}
+
+.graph4-data-box .data-bar-box{
+  border-left: 1px solid;
+  color: var(--sub-text-color);
+}
+
+.graph4-data-box .data-bar-box img{
+  padding: 10px 0;
+  transform-origin: center left;
+}
+
+.graph4-data-box .data-bar-box .flex p{
+  font-size: clamp(10px, 3vw, 16px);
+}
+
+.graph4-data-box .data-bar-box .flex p span{
+  font-size: clamp(16px, 5vw, 32px);
+}
+
+.market-size-graph{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.market-number-block{
+  position: relative;
+  padding: 1vw 2vw;
+  border-radius: 20px;
+  display: inline-block;
+  background-color: #B6DECB;
+  font-size: clamp(10px, 1vw, 20px);
+  color: var(--sub-text-color);
+}
+
+.market-number-block span{
+  font-size: clamp(10px, 3vw, 36px);
+}
+
+.market-number-block-first{
+  top: 15vw;
+  left: 75vw;
+}
+
+.market-number-block-second{
+  top: 25vw;
+  left: 50vw;
+}
+
+/*----------------------------------------*
+ data-world
+*----------------------------------------*/
+
+.section-title-sub{
+  font-size: clamp(16px, 5vw, 32px);
+  margin-top: 100px;
+}
+
+.smartphone-data{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.share-graph-title{
+  font-size: 16px;
+}
+
+.share-graph .data-img-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.share-graph .data-img-box img{
+  transform-origin: center left;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+  animation-name: size-expansion;
+}
+
+.share-graph .flex{
+  align-items: first baseline;
+  justify-content: space-between;
+}
+
+.share-graph .data-title-box{
+  margin: 220px 0 20px 0;
+}
+
+.share-graph .model-title{
+  position: relative;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  bottom: 60px;
+}
+
+.share-graph .data-title-box img{
+  width: 30px;
+  margin-right: 20px;
+}
+
+.share-graph .ranks{
+  margin: 0 24px;
+}
+
+.share-graph .data-number{
+  margin-left: 30%;
+  line-height: 2.2em;
+}
+
+.share-graph p{
+  font-size: clamp(16px, 3vw, 30px);
+}
+
+.share-graph .top-data span{
+  font-size: clamp(16px, 6vw, 50px);
+}
+
+/*----------------------------------------*
+ keyframes
+*----------------------------------------*/
+
+@keyframes size-expansion {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
